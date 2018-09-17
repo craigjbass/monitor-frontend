@@ -29,12 +29,12 @@ export default class GetToken extends React.Component {
   renderMessageSent = () => {
     return (
       <div data-test="sent_message" className="col-md-offset-2 col-md-8">
-        <h3>We&#39;ve sent an email to {this.state.email}</h3>
-        <p>
-          This link expires in 10 minutes, so be sure to use is soon or generate a new one.
+        <h3 className="text-center">We&#39;ve sent an email to {this.state.email}</h3>
+        <p className="text-center">
+          This link <b>expires in 10 minutes</b>, so be sure to use is soon or generate a new one.
         </p>
 
-        <h4>
+        <h4 className="text-center">
           <b>Go check your email </b>
         </h4>
 
