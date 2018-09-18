@@ -31,16 +31,18 @@ export default class GetToken extends React.Component {
       <div data-test="sent_message" className="col-md-offset-2 col-md-8">
         <h3 className="text-center">We&#39;ve sent an email to {this.state.email}</h3>
         <p className="text-center">
-          This link <b>expires in 10 minutes</b>, so be sure to use is soon or generate a new one.
+          This link <b>will expire in 10 minutes</b>, after which you will need to generate a new one.
         </p>
 
         <h4 className="text-center">
-          <b>Go check your email </b>
+          <b>Please check your email</b>
         </h4>
 
         <p>
           Didn&#39;t receive an email? Check your spam and make sure you entered
-          your email correctly. If you are not pre-authorised, please contact homes.england@notifications.service.gov.uk
+          your email correctly. 
+          If you are not pre-authorised, 
+          please contact <a href="mailto:homes.england@notifications.service.gov.uk"> homes.england@notifications.service.gov.uk</a>
         </p>
       </div>
     );
@@ -58,7 +60,8 @@ export default class GetToken extends React.Component {
             <p>
               <i>
                 Use your email that is associated with this project.
-                If you are not pre-authorised, please contact homes.england@notifications.service.gov.uk
+                If you are not pre-authorised, 
+                please contact <a href="mailto:homes.england@notifications.service.gov.uk"> homes.england@notifications.service.gov.uk</a>
               </i>
             </p>
 
@@ -84,12 +87,12 @@ export default class GetToken extends React.Component {
             </div>
             <div>
               <p>
-                We'll send an email from <b> homes.england@notifications.service.gov.uk </b>.
+                We&#39;ll send an email from <b> homes.england@notifications.service.gov.uk </b>.
                 This email contains a magic link that you can use (click) to access the project.
               </p>
 
               <p>
-                This link <b>expires in 10 minutes</b>, so be sure to use is soon or generate a new one.
+                This link <b>will expire in 10 minutes</b>, after which you will need to generate a new one.
               </p>
             </div>
           </div>
