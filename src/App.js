@@ -29,6 +29,7 @@ import TokenGateway from "./Gateway/TokenGateway";
 
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import NewProject from "./Components/NewProjectPage";
 
 const returnGateway = new ReturnGateway(new ApiKeyGateway())
 const validateReturnUseCase = new ValidateReturn(returnGateway);
@@ -66,6 +67,14 @@ const renderProjectPage = props => (
   />
 );
 
+const renderNewProjectPage = props => (
+  <NewProject
+    {...props}
+    getProject={getProjectUseCase}
+    generateUISchema={generateDisabledUISchema}
+  />
+);
+
 const App = () => (
   <Router>
     <div className="app-container">
@@ -90,6 +99,7 @@ const App = () => (
               canAccessProject={canAccessProjectUseCase}
             >
               <Route exact path="/project/:id" render={renderProjectPage} />
+              <Route exact path="/project/:id/new" render={renderNewProjectPage} />
               <Route
                 exact
                 path="/project/:projectId/return"
