@@ -87,10 +87,6 @@ export default class GetToken extends React.Component {
                 We&#39;ll send an email from homes.england at notifications.service.gov.uk .
                 This email contains a magic link that you can use (click) to access the project.
               </p>
-
-              <p>
-                This link will expire in 10 minutes, after which you will need to generate a new one.
-              </p>
             </div>
           </div>
 
