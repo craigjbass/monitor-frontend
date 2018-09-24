@@ -12,8 +12,6 @@
       "X-Content-Type-Options": "nosniff",
       "X-XSS-Protection": "1; mode=block",
       "Referrer-Policy": "no-referrer"
-    },
-  "ssl_ciphers": {
-    "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH"
+    }
   }    
 }
