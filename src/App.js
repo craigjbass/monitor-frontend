@@ -24,14 +24,14 @@ import ValidateReturn from "./UseCase/ValidateReturn";
 
 import ProjectGateway from "./Gateway/ProjectGateway";
 import ReturnGateway from "./Gateway/ReturnGateway";
-import ApiKeyGateway from "./Gateway/ApiKeyGateway"
+import ApiKeyGateway from "./Gateway/ApiKeyGateway";
 import TokenGateway from "./Gateway/TokenGateway";
 
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import NewProject from "./Components/NewProjectPage";
 
-const returnGateway = new ReturnGateway(new ApiKeyGateway())
+const returnGateway = new ReturnGateway(new ApiKeyGateway());
 const validateReturnUseCase = new ValidateReturn(returnGateway);
 const createReturnUseCase = new CreateReturn(returnGateway);
 const generateDisabledUISchema = new GenerateDisabledUISchema();
@@ -85,21 +85,26 @@ const App = () => (
         <Route
           path="/project/:id"
           render={props => (
-            <Portal
-              {...props}
-              projectId={props.match.params.id}
-              onApiKey={apiKey => {
-                window.apiKey = apiKey;
-              }}
-              requestToken={requestTokenUseCase}
-              token={
-                qs.parse(props.location.search, { ignoreQueryPrefix: true })
-                  .token
-              }
-              canAccessProject={canAccessProjectUseCase}
-            >
+            // <Portal
+            //   {...props}
+            //   projectId={props.match.params.id}
+            //   onApiKey={apiKey => {
+            //     window.apiKey = apiKey;
+            //   }}
+            //   requestToken={requestTokenUseCase}
+            //   token={
+            //     qs.parse(props.location.search, { ignoreQueryPrefix: true })
+            //       .token
+            //   }
+            //   canAccessProject={canAccessProjectUseCase}
+            // >
+            <React.Fragment>
               <Route exact path="/project/:id" render={renderProjectPage} />
-              <Route exact path="/project/:id/new" render={renderNewProjectPage} />
+              <Route
+                exact
+                path="/project/:id/new"
+                render={renderNewProjectPage}
+              />
               <Route
                 exact
                 path="/project/:projectId/return"
@@ -110,7 +115,8 @@ const App = () => (
                 path="/project/:projectId/return/:returnId"
                 render={renderReturnPage}
               />
-            </Portal>
+            </React.Fragment>
+            // </Portal>
           )}
         />
       </div>

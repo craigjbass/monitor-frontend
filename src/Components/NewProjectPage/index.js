@@ -44,6 +44,7 @@ export default class NewProject extends React.Component {
         <ParentForm
           formData={this.state.formData}
           schema={this.state.formSchema}
+          onChange={x => console.log(x)}
         />
         <button data-test="new-return-button" className="btn btn-primary" onClick={this.createReturn}>
           Create a new return
