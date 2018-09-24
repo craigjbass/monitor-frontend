@@ -31,11 +31,11 @@ export default class GetToken extends React.Component {
       <div data-test="sent_message" className="col-md-offset-2 col-md-8">
         <h3 className="text-center">We&#39;ve sent an email to {this.state.email}</h3>
         <p className="text-center">
-          This link <b>will expire in 10 minutes</b>, after which you will need to generate a new one.
+          This link will expire in 10 minutes, after which you will need to generate a new one.
         </p>
 
         <h4 className="text-center">
-          <b>Please check your email</b>
+          Please check your email
         </h4>
 
         <p>
@@ -58,11 +58,8 @@ export default class GetToken extends React.Component {
             </h3>
 
             <p>
-              <i>
-                Use your email that is associated with this project.
-                If you are not pre-authorised, 
-                please contact <a href="mailto:homes.england@notifications.service.gov.uk"> homes.england@notifications.service.gov.uk</a>
-              </i>
+              Use your email that is associated with this project.
+              If you are not pre-authorised, please contact Homes England.
             </p>
 
             <div id='submitForm'>
@@ -87,12 +84,12 @@ export default class GetToken extends React.Component {
             </div>
             <div>
               <p>
-                We&#39;ll send an email from <b> homes.england@notifications.service.gov.uk </b>.
+                We&#39;ll send an email from homes.england at notifications.service.gov.uk .
                 This email contains a magic link that you can use (click) to access the project.
               </p>
 
               <p>
-                This link <b>will expire in 10 minutes</b>, after which you will need to generate a new one.
+                This link will expire in 10 minutes, after which you will need to generate a new one.
               </p>
             </div>
           </div>
